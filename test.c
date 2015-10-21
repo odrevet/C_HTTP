@@ -1,9 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
-#include <errno.h>
-#include <time.h>
-#include <stdbool.h>
 
 char* strdup (const char* str);
 
@@ -13,10 +9,9 @@ char* strdup (const char* str);
  
 void usage(const char* program_name)
 {
-  printf("usage: %s hostname page [num]\n", program_name);
+  printf("usage: %s hostname page\n", program_name);
   printf("example: %s www.example.com \"/index.php?id=42&action=foo\"\n", program_name);
   puts("note the abscence of http:// and the usage of quote if your terminal proceed the special characters in the page");
-  puts("num is an optional parameter to (re)start the dump from an ets index");
 }
 
 //////////////////////////////////////
@@ -29,16 +24,8 @@ int main(int argc, char **argv)
     exit (EXIT_FAILURE);
   }
 
-  const char *hostname = strdup(*(argv+1));
-  const char *page = strdup(*(argv+2));
- 
-  int i;
-  if(argc == 4){
-    i = atoi(*(argv+3));
-  }
-  else{
-    i = 0;
-  }
+  const char *hostname = *(argv+1);
+  const char *page     = *(argv+2);
 
   //some networking initialisations
 #if defined (WIN32)
@@ -51,6 +38,7 @@ int main(int argc, char **argv)
 #endif
  
   const char *ip = host_to_ip(hostname);
+  
   if(!ip){
     puts("Cannot resolve hostname's ip");
     puts("Check your network connection and that you entered the hostname correcly");

@@ -7,7 +7,7 @@ gcc test.c http.c -o http_req
 
 #Usage
 
-./http_req hostname page [num]
+./http_req hostname page
 
 
 ## example

@@ -55,7 +55,7 @@ int main(int argc, char **argv){
     exit (EXIT_FAILURE);
   }
 
-  printf("Connected to %s/%s (%s:%d)\n", hostname, page, inet_ntoa(sin.sin_addr), htons(sin.sin_port));
+  printf("Connected to %s%s (%s:%d)\n\n", hostname, page, inet_ntoa(sin.sin_addr), htons(sin.sin_port));
 
   char *content = NULL;
   content = http_request(sock, hostname, page);

@@ -1,20 +1,20 @@
 # C_HTTP
-HTTP request in the C language (Linux + Windows )
 
-#build
+HTTP request in the C language for Linux and Windows. 
 
-gcc test.c http.c -o http_req
+# build
 
-#Usage
+ gcc test.c http.c -o http_req
 
-./http_req hostname page
+# Usage
 
+ ./http_req hostname page
 
-## example
+# example
 
-./http_req www.example.com "/index.php?id=42&action=foo"
+ ./http_req www.example.com "/index.php?id=42&action=foo"
 
-note the abscence of http:// and the usage of quote if your terminal proceed the special characters in the page
+note: 
 
-
-
+* the url is not prefixed by 'http://'
+* the usage of quotes to prevent special character to mess with the terminal

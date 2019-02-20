@@ -20,7 +20,12 @@ gcc test.c http.c -o http_req
 ./http_req <hostname> [<page>]
 ```
 
-# example
+# examples
+
+
+```
+./http_req www.example.com
+```
 
 ```
 ./http_req www.example.com "/"
@@ -30,5 +35,5 @@ gcc test.c http.c -o http_req
 ./http_req www.example.com "/index.php?id=42&action=foo"
 ```
 
-* the hostname is not prefixed by 'http://'
-* the usage of quotes to prevent special character to mess with the terminal
+* Hostname is not prefixed with `http://`
+* Usage of quotes to prevent special character to mess with the terminal

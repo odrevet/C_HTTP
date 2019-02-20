@@ -1,24 +1,24 @@
 # C_HTTP
 
-HTTP request in the C language for Linux and Windows. 
+Demonstrate how to performe an HTTP request with the the C language using sockets for Linux and Windows. 
 
 # build
 
 ```
- gcc test.c http.c -o http_req
+gcc test.c http.c -o http_req
 ```
 
 # Usage
 
 ```
- ./http_req hostname page
+./http_req hostname page
 ```
 
 # example
 
 ```
- ./http_req www.example.com "/index.php?id=42&action=foo" 
+./http_req www.example.com "/index.php?id=42&action=foo" 
 ```
 
-* the url is not prefixed by 'http://'
+* the hostname is not prefixed by 'http://'
 * the usage of quotes to prevent special character to mess with the terminal

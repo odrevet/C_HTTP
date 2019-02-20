@@ -10,7 +10,7 @@ char* strdup (const char* str);
 void usage(const char* program_name){
   printf("usage: %s <hostname> [<page>]\n", program_name);
   puts("`hostname` is mandatory, `page` is optional (defaults to '/')");
-  puts("`is present,`page must start with `/`. Otherwise the response will likely be a `400 - bad request`");
+  puts("`is present,`page must start with `/`. Otherwise the response will likely be `400 - bad request`");
   printf("example: %s www.example.com /\n", program_name);
 }
 

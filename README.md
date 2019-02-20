@@ -14,7 +14,7 @@ gcc test.c http.c -o http_req
 
 # Usage
 
-`hostname` is mandatory, `page` is optional (defaults to '/')
+`hostname` is mandatory, `page` is optional (defaults to `/`)
 
 ```
 ./http_req <hostname> [<page>]

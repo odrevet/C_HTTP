@@ -6,7 +6,7 @@ HTTP request in the C language for Linux and Windows.
 
 ```
  gcc test.c http.c -o http_req
-`` 
+```
 
 # Usage
 

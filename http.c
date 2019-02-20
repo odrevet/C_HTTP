@@ -44,11 +44,6 @@ Host: %s\r\n\
 		hostname,
 		CONNECTION_TYPE);
 
-  printf("---------- HTTP REQUEST ---------- \n\
-'%s'\n\
---------------------------------------------------------------------------------\n",
-	 buf);
-
   //send the http request
   send(sock, buf, strlen(buf), 0);
 
@@ -75,7 +70,7 @@ Host: %s\r\n\
     else{
       len = recv(sock, buf, BUFSIZ, 0);
       if(len == 0)break;
-      result = realloc(result, (strlen(result) + len) * sizeof(char));
+      result = realloc(result, (strlen(result) + len + 1) * sizeof(char));
       strncat(result, buf, len);
     }
   }

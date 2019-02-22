@@ -1,10 +1,8 @@
-# C_HTTP
-
 Demonstrate how to performe an HTTP GET request with the the C language using sockets, for Linux and Windows.
 
 Most of the calls are wrapped in http.c
 
-test.c uses  http.c to demonstrate how to actually do a request.
+test.c uses http.c to demonstrate how to actually do a request.
 
 # build
 
